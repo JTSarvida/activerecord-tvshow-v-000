@@ -9,4 +9,7 @@ class Show < ActiveRecord::Base
     popular_show
   end
   
+  def self.lowest_rating
+    self.minimum(:rating)
+  end 
 end
